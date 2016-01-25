@@ -59,8 +59,8 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoia2V2cmVpbiIsImEiOiJfQ0RHX2hZIn0.hI4lNnug0mHlU
 var map = L.mapbox.map('map').setView([37.5,-120.1], 7);
 var layers = document.getElementById('menu-ui');
 
-addLayer(L.mapbox.tileLayer('kevrein.4acek9ya'), 'Base Map', 1);
-addLayer(L.mapbox.tileLayer('kevrein.8vcy04ux'), 'Bike Lanes', 2);
+addLayer(L.mapbox.tileLayer('kevrein.4acek9ya'));
+addLayer(L.mapbox.tileLayer('kevrein.8vcy04ux'), 'Bike Lanes', 1);
 
 function addLayer(layer, name, zIndex) {
     layer
