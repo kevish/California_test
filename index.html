@@ -56,7 +56,16 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoia2V2cmVpbiIsImEiOiJfQ0RHX2hZIn0.hI4lNnug0mHlUQ16xX3fIg';
-var map = L.mapbox.map('map','kevrein.4acek9ya').setView([37.5,-120.1], 7);
+var southWest = L.latLng(32.45,-124.45),
+    northEast = L.latLng(42.14,-113.77),
+    bounds = L.latLngBounds(southWest, northEast);
+var map = L.mapbox.map('map','kevrein.4acek9ya',{
+            maxBounds: bounds,
+            maxZoom: 11,
+            minZoom: 7,
+            zoom: 7,
+            center: [37.5,-120.1],
+)};
 var layers = document.getElementById('menu-ui');
 
 addLayer(L.mapbox.tileLayer('kevrein.8vcy04ux'), 'Streets', 1);
