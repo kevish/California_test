@@ -16,10 +16,13 @@
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoia2V2cmVpbiIsImEiOiJfQ0RHX2hZIn0.hI4lNnug0mHlUQ16xX3fIg';
+  var southWest = L.latLng(-57, -179),
+	northEast = L.latLng(75, 179),
+	bounds = L.latLngBounds(southWest, northEast);
   var map = L.mapbox.map('map', null, {
-	  maxBounds: bounds,
-      maxZoom: 10,
-	  minZoom: 7,
+	maxBounds: bounds,
+	maxZoom: 10,
+	minZoom: 7,
   }).setView([37.5,-120.1], 7);
 
   var layers = {
@@ -33,3 +36,4 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoia2V2cmVpbiIsImEiOiJfQ0RHX2hZIn0.hI4lNnug0mHlU
 </script>
 </body>
 </html>
+
